@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="01\1_1.fsx" />
+    <None Include="01\1_2.fsx" />
+    <Content Include="01\1_input.txt" />
+    <Content Include="02\2_input.txt" />
+    <None Include="02\2_1.fsx" />
+    <None Include="02\2_2.fsx" />
+  </ItemGroup>
+
+</Project>
