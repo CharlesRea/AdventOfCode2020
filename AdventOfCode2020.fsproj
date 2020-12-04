@@ -19,6 +19,11 @@
     <Content Include="04\input.txt" />
     <None Include="04\4_1.fsx" />
     <None Include="04\4_2.fsx" />
+    <Compile Include="04\4_2_ValidationLibrary.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AccidentalFish.FSharp.Validation" Version="0.10.1" />
   </ItemGroup>
 
 </Project>
