@@ -1,5 +1,6 @@
 module Common
 
+open System
 open System.Text.RegularExpressions
 
 let tryParseWith (tryParseFunc: string -> bool * _) = tryParseFunc >> function
@@ -17,3 +18,6 @@ let (|ParseRegex|_|) regex str =
    if m.Success
    then Some (List.tail [ for x in m.Groups -> x.Value ])
    else None
+
+let splitString (separator: string) (str: string): string[] =
+    str.Split([| separator |] |> Seq.toArray, StringSplitOptions.None)

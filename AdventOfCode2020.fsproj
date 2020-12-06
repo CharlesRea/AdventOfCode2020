@@ -22,6 +22,8 @@
     <Compile Include="04\4_2_ValidationLibrary.fs" />
     <Content Include="05\input.txt" />
     <None Include="05\5.fsx" />
+    <Content Include="06\input.txt" />
+    <None Include="06\6.fsx" />
   </ItemGroup>
 
   <ItemGroup>
