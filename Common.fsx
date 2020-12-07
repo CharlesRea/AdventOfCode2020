@@ -21,3 +21,6 @@ let (|ParseRegex|_|) regex str =
 
 let splitString (separator: string) (str: string): string[] =
     str.Split([| separator |] |> Seq.toArray, StringSplitOptions.None)
+
+let printSequence (value: 'a seq) =
+    value |> Seq.toList |> List.iter (printf "%A\r\n")
