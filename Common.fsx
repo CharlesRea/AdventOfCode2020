@@ -24,3 +24,6 @@ let splitString (separator: string) (str: string): string[] =
 
 let printSequence (value: 'a seq) =
     value |> Seq.toList |> List.iter (printf "%A\r\n")
+
+let replaceArrayElement (index: int) (newValue: 'a) (array: 'a array): 'a array =
+    seq { for i in 0 .. array.Length - 1 -> if i = index then newValue else array.[i] } |> Seq.toArray
