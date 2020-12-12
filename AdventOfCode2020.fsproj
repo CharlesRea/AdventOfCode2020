@@ -35,6 +35,8 @@
     <Content Include="11\input.txt" />
     <None Include="11\11_1.fsx" />
     <None Include="11\11_2.fsx" />
+    <Content Include="12\input.txt" />
+    <None Include="12\12.fsx" />
   </ItemGroup>
 
   <ItemGroup>
