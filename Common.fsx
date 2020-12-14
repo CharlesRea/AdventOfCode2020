@@ -8,9 +8,11 @@ let tryParseWith (tryParseFunc: string -> bool * _) = tryParseFunc >> function
     | false, _   -> None
 
 let parseInt = tryParseWith System.Int32.TryParse
+let parseInt64 = tryParseWith System.Int64.TryParse
 let parseDouble = tryParseWith System.Double.TryParse
 
-let (|Int|_|)    = parseInt
+let (|Int|_|) = parseInt
+let (|Int64|_|) = parseInt64
 let (|Double|_|) = parseDouble
 
 let (|ParseRegex|_|) regex str =
@@ -27,3 +29,6 @@ let printSequence (value: 'a seq) =
 
 let replaceArrayElement (index: int) (newValue: 'a) (array: 'a array): 'a array =
     seq { for i in 0 .. array.Length - 1 -> if i = index then newValue else array.[i] } |> Seq.toArray
+
+let indexed (xs: 'a seq): ('a * int) seq =
+    xs |> Seq.mapi (fun i x -> (x, i))

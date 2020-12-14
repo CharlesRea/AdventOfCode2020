@@ -37,4 +37,3 @@ let occurrencesOfAllBuses =
     List.fold findIntersections (List.head buses) (List.tail buses)
 
 printf "%d" occurrencesOfAllBuses.StartPoint
-
