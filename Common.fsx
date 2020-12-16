@@ -32,3 +32,12 @@ let replaceArrayElement (index: int) (newValue: 'a) (array: 'a array): 'a array 
 
 let indexed (xs: 'a seq): ('a * int) seq =
     xs |> Seq.mapi (fun i x -> (x, i))
+
+let toLookup (values: ('a * 'b) seq): Map<'a, 'b list> =
+    values
+    |> Seq.groupBy fst
+    |> Seq.map (fun (key, value) -> (key, Seq.map snd value |> Seq.toList))
+    |> Map.ofSeq
+
+let all (predicate: 'T -> bool) (values: 'T seq): bool =
+    not (Seq.exists (fun value -> not (predicate value)) values)
