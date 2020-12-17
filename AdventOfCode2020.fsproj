@@ -48,6 +48,9 @@
     <None Include="15\15_MutableDict.fsx" />
     <Content Include="16\input.txt" />
     <None Include="16\16.fsx" />
+    <Content Include="17\input.txt" />
+    <None Include="17\17_1.fsx" />
+    <None Include="17\17_2.fsx" />
   </ItemGroup>
 
   <ItemGroup>

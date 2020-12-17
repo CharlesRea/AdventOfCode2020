@@ -41,3 +41,9 @@ let toLookup (values: ('a * 'b) seq): Map<'a, 'b list> =
 
 let all (predicate: 'T -> bool) (values: 'T seq): bool =
     not (Seq.exists (fun value -> not (predicate value)) values)
+
+let allTriples (xs: 'x seq) (ys: 'y seq) (zs: 'z seq): ('x * 'y * 'z) seq =
+    zs |> Seq.allPairs ys |> Seq.allPairs xs |> Seq.map (fun (x, (y, z)) -> (x, y, z))
+
+let allQuadruples (ws: 'w seq) (xs: 'x seq) (ys: 'y seq) (zs: 'z seq): ('w * 'x * 'y * 'z) seq =
+    zs |> Seq.allPairs ys |> Seq.allPairs xs |> Seq.allPairs ws |> Seq.map (fun (w, (x, (y, z))) -> (w, x, y, z))
