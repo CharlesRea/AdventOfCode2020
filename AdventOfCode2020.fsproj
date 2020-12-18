@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -51,6 +52,9 @@
     <Content Include="17\input.txt" />
     <None Include="17\17_1.fsx" />
     <None Include="17\17_2.fsx" />
+    <Content Include="18\input.txt" />
+    <None Include="18\18_1.fsx" />
+    <None Include="18\18_2.fsx" />
   </ItemGroup>
 
   <ItemGroup>
