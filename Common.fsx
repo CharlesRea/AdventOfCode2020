@@ -47,3 +47,12 @@ let allTriples (xs: 'x seq) (ys: 'y seq) (zs: 'z seq): ('x * 'y * 'z) seq =
 
 let allQuadruples (ws: 'w seq) (xs: 'x seq) (ys: 'y seq) (zs: 'z seq): ('w * 'x * 'y * 'z) seq =
     zs |> Seq.allPairs ys |> Seq.allPairs xs |> Seq.allPairs ws |> Seq.map (fun (w, (x, (y, z))) -> (w, x, y, z))
+
+let values (map: Map<'K, 'V>): 'V seq =
+    map |> Map.toSeq |> Seq.map snd
+
+let joinCharsToString (chars: char seq): string =
+    chars |> Seq.map string |> String.concat ""
+
+let reverseString x =
+    x |> Seq.rev |> joinCharsToString
